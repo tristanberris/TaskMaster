@@ -7,33 +7,27 @@ let _state = {
 
 //NOTE You should not need to change the code from this point down
 
+//NOTE this method will get the lists from local storage at the start of the app
+function _loadState() {
+  let data = JSON.parse(localStorage.getItem("taskState"));
+  if (data) {
+    data.lists = data.lists.map(l => new List(l));
+    _state = data;
+  }
+}
+_loadState();
+
 class Store {
   /**
    * Provides access to application state data
    */
-  constructor() {
-    this.loadState();
-  }
   get State() {
     return _state;
   }
 
-  get Lists() {
-    //NOTE use this getter to ensure the objects in list are all of type List
-    return _state.lists.map(list => new List(list));
-  }
-
   //NOTE call saveState everytime you change the state in any way
   saveState() {
-    localStorage.setItem("state", JSON.stringify(_state));
-  }
-
-  //NOTE this method will get the lists from local storage at the start of the app
-  loadState() {
-    let saved = JSON.parse(localStorage.getItem("state"));
-    if (saved) {
-      _state = saved;
-    }
+    localStorage.setItem("taskState", JSON.stringify(_state));
   }
 }
 
