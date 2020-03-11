@@ -31,7 +31,7 @@ Dive right into the coding, it doesn't matter which step below you do first howe
 - Repeat a similar process for deleting a list and creating and deleting Items (NOTE: you may not need Items to be their own class, as they are likely just a string).
 
 ## Requirements:
-
+![](./TaskMaster.png)
 <hr>
 
 #### Visualization
