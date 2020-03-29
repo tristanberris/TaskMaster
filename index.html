@@ -12,7 +12,18 @@
     <title>TaskMaster</title>
   </head>
 
-  <body>
+  <body class="container">
+    <h1 class="">Add List:</h1>
+    <form class="form-inline needs-validation" onsubmit="app.listController.create(event)" >
+      <div class="form-group mx-sm-3 mb-2">
+        <input type="text" name="listName" class="form-control" id="inputPassword2" placeholder="List Name..." required>
+      </div>
+      <button type="submit" class="btn btn-primary mb-2" onclick="">Create</button>
+    </form>
+
+    <h1>Lists:</h1>
+    <div id="listDraw" class="row"></div>
+
     <script src="app/main.js" type="module"></script>
   </body>
 </html>

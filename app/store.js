@@ -2,8 +2,15 @@ import List from "./Models/List.js";
 
 let _state = {
   /** @type {List[]} */
-  lists: []
+  lists: [],
+  // /** @type {Item[]} */
+  // items: []
 };
+
+// let _item = {
+//   /** @type {Item[]} */
+//   items: [new List({title: "testing?"})]
+// }
 
 //NOTE You should not need to change the code from this point down
 
