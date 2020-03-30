@@ -25,7 +25,7 @@ export default class List {
     <div class="card" style="">
       <div class="card-body">
         <h5 class="card-title">${this.title}</h5>
-        <button type="button" class="close text-danger" onclick="app.ListController.delete('${this.id}')">
+        <button type="button" class="close text-danger" onclick="app.listController.delete('${this.id}')">
         <span>&times;</span>
         </button>
         <form onsubmit="app.listController.addItem(event, '${this.id}')">
@@ -35,9 +35,13 @@ export default class List {
           </div>
           
           
-          <button type="submit" class="btn btn-primary mb-2" >Add task!</button>
+          <button type="submit" class="btn btn-primary mb-2">Add task!</button>
           </form>
-          <p class="card-text">${this.items}</p>
+          <div class="card-text row" id="drawItem-${this.id}">
+          
+
+          </div>
+          </div>
   </div>
   </div>  
   </div>
