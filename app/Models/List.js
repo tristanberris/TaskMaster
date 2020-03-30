@@ -28,18 +28,18 @@ export default class List {
         <button type="button" class="close text-danger" onclick="app.listController.delete('${this.id}')">
         <span>&times;</span>
         </button>
-        <form onsubmit="app.listController.addItem(event, '${this.id}')">
+        <form onsubmit="app.listController.addItem(event, '${this.id}')" class= "needs-validation">
           <div class="form-group">
               <label for="itemName"></label>
-              <input type="text" name="itemName" class="form-control" placeholder="Add task...">
+              <input type="text" name="itemName" class="form-control" placeholder="Add task..." required>
           </div>
           
           
-          <button type="submit" class="btn btn-primary mb-2">Add task!</button>
+          <button type="submit" class="btn btn-primary mb-2 ">Add task!</button>
           </form>
           <div class="card-text row" id="drawItem-${this.id}">
           
-
+      </form>
           </div>
           </div>
   </div>

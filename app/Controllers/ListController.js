@@ -21,10 +21,10 @@ function _drawItems() {
     let template = '';
     list.items.forEach((i, index) => {
       let itemTemplate = /*html*/ `
-        <div class="col-10"> ${i} </div>
-        <div class="col-2"> 
-        <button type="button" class="close text-danger" onclick="app.listController.deleteItem('${index}', '${list.id}')">
-        <span>&times;</span>
+        <div class="col-10 border border-info p-2"> ${i} </div>
+        <div class="col-2 p-0 border border-info"> 
+        <button type="button" class=" btn btn-danger btn-block h-100" onclick="app.listController.deleteItem('${index}', '${list.id}')">
+     
         </button>
         </div>
       `
